@@ -24,7 +24,7 @@ const CartItem = ({ onContinueShopping }) => {
   };
 
   const handleContinueShopping = (e) => {
-    onContinueShopping();
+    onContinueShopping(e);
    
   };
 
@@ -58,7 +58,7 @@ const CartItem = ({ onContinueShopping }) => {
       const unitPrice = parseFloat(item.cost.substring(1));
       // Multiply by quantity to get total cost
       const totalCost = item.quantity * unitPrice;
-      
+
       return totalCost;
   };
 
